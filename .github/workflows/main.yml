@@ -64,7 +64,9 @@ jobs:
        
       - name:  zip version
         run: zip --version
-             echo $LOC_VAR 
+      - name:  local version
+        run: |
+          echo "var 1 = $LOC_VAR" 
         
       - name: Print package name
         run: echo "Package name - ${{ env.PACKAGE_NAME }}"
