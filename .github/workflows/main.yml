@@ -58,15 +58,18 @@ jobs:
         
       - name:  Docker version
         run: docker --version
-        env:
-          LOC_VAR: "This is local variable" 
+         
        
        
       - name:  zip version
         run: zip --version
       - name:  local version
+         
+        env:
+          LOC_VAR: "This is local variable"
         run: |
-          echo "var 1 = $LOC_VAR" 
-        
+          echo "var 1 = $LOC_VAR"
+          
+          
       - name: Print package name
         run: echo "Package name - ${{ env.PACKAGE_NAME }}"
