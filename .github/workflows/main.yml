@@ -31,7 +31,7 @@ jobs:
         run: |
            echo "${{ env.APP_NAME }}"
       - name: Git clone repo
-        uses: actions/checkout@1
+        uses: actions/checkout@v1
         
       - name: List files and folders
         run: ls -lah
