@@ -30,8 +30,12 @@ jobs:
       - name: Print global variables
         run: |
            echo "${{ env.APP_NAME }}"
+      - name: Git clone repo
+        uses: actions/checkout@1
+        
       - name: List files and folders
         run: ls -lah
+     
            
   my-test:
     # The type of runner that the job will run on
@@ -41,5 +45,11 @@ jobs:
     steps:       
       - name: Run a one-line test script
         run: echo Hello, test!
+        
+      - name: Lets test code
+        run: aws --version
+      - name:  Docker version
+        run: docker --version
+        
       - name: Print package name
         run: echo "Package name - ${{ env.PACKAGE_NAME }}"
