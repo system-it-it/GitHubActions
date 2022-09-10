@@ -52,7 +52,7 @@ jobs:
       - name: Run local vars
         run: |
           echo "var 1 = ${{ env.VAR1 }}"
-          echo $LOC_VAR
+         
       - name: Lets test code
         run: aws --version
         
@@ -60,9 +60,11 @@ jobs:
         run: docker --version
         env:
           LOC_VAR: "This is local variable" 
-         
+       
+       
       - name:  zip version
         run: zip --version
+             echo $LOC_VAR 
         
       - name: Print package name
         run: echo "Package name - ${{ env.PACKAGE_NAME }}"
